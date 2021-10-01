@@ -9,7 +9,7 @@ libdir=${exec_prefix}/@LIBDIR@
 
 Name: xxhash
 Description: extremely fast hash algorithm
-URL: http://www.xxhash.com/
+URL: https://www.xxhash.com/
 Version: @VERSION@
 Libs: -L${libdir} -lxxhash
 Cflags: -I${includedir}

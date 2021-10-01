@@ -44,7 +44,7 @@ if(NOT CMAKE_CONFIGURATION_TYPES)
 endif()
 
 option(BUILD_SHARED_LIBS "Build shared library" ON)
-option(XXHASH_BUILD_XXHSUM "Build the xxhsum binary" ON)
+set(XXHASH_BUILD_XXHSUM ON CACHE BOOL "Build the xxhsum binary")
 
 # If XXHASH is being bundled in another project, we don't want to
 # install anything.  However, we want to let people override this, so
@@ -82,13 +82,8 @@ set_target_properties(xxhash PROPERTIES
   VERSION "${XXHASH_VERSION_STRING}")
 
 if(XXHASH_BUILD_XXHSUM)
-  set(XXHSUM_DIR "${XXHASH_DIR}/cli")
   # xxhsum
-  add_executable(xxhsum "${XXHASH_DIR}/xxhsum.c"
-                        "${XXHSUM_DIR}/xsum_os_specific.c"
-                        "${XXHSUM_DIR}/xsum_output.c"
-                        "${XXHSUM_DIR}/xsum_sanity_check.c"
-                )
+  add_executable(xxhsum "${XXHASH_DIR}/xxhsum.c")
   add_executable(${PROJECT_NAME}::xxhsum ALIAS xxhsum)
 
   target_link_libraries(xxhsum PRIVATE xxhash)
