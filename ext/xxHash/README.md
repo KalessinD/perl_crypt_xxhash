@@ -9,7 +9,7 @@ Code is highly portable, and hashes are identical across all platforms (little /
 
 |Branch      |Status   |
 |------------|---------|
-|dev         | [![Build Status](https://travis-ci.org/Cyan4973/xxHash.svg?branch=dev)](https://travis-ci.org/Cyan4973/xxHash?branch=dev) |
+|dev         | [![Build Status](https://github.com/Cyan4973/xxHash/actions/workflows/ci.yml/badge.svg?branch=dev)](https://github.com/Cyan4973/xxHash/actions?query=branch%3Adev+) |
 
 
 Benchmarks
@@ -75,7 +75,7 @@ and passes all tests, ensuring reasonable quality levels.
 It also passes extended tests from [newer forks of SMHasher], featuring additional scenarios and conditions.
 
 Finally, xxHash provides its own [massive collision tester](https://github.com/Cyan4973/xxHash/tree/dev/tests/collisions),
-able to generate and compare billions of hash to test the limits of 64-bit hash algorithms.
+able to generate and compare billions of hashes to test the limits of 64-bit hash algorithms.
 On this front too, xxHash features good results, in line with the [birthday paradox].
 A more detailed analysis is documented [in the wiki](https://github.com/Cyan4973/xxHash/wiki/Collision-ratio-comparison).
 
@@ -125,6 +125,8 @@ The following macros can be set at compilation time to modify libxxhash's behavi
                                    Adds one branch at the beginning of each hash.
 - `XXH_STATIC_LINKING_ONLY`: gives access to the state declaration for static allocation.
                              Incompatible with dynamic linking, due to risks of ABI changes.
+- `XXH_NO_XXH3` : removes symbols related to `XXH3` (both 64 & 128 bits) from generated binary.
+                  Useful to reduce binary size, notably for applications which do not use `XXH3`.
 - `XXH_NO_LONG_LONG`: removes compilation of algorithms relying on 64-bit types (XXH3 and XXH64). Only XXH32 will be compiled.
                       Useful for targets (architectures and compilers) without 64-bit support.
 - `XXH_IMPORT`: MSVC specific: should only be defined for dynamic linking, as it prevents linkage errors.
