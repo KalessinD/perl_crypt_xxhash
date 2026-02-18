@@ -95,6 +95,17 @@ This hash is converted into hex string.
 
 Get a 64 bit hash from segmented data by calling xxhash3_64bits_stream_update multiple times.
 
+    sub hash_a_file {
+        my($fh) = @_;
+        my $stream = xxhash3_64bits_stream(12345);
+        my $buf;
+        while( read $fh, $buf, 1024 ) {
+            xxhash3_64bits_stream_update($stream, $buf);
+        }
+        return xxhash3_64bits_stream_digest($stream);
+        # return xxhash3_64bits_stream_digest_hex($stream); # hex version
+    } # the resources $stream occupied will be released here.
+
 =head1 SPEED
 
 There are some official benchmark results can be found on the project
