@@ -24,8 +24,8 @@ ext/xxHash/xxh3.h
 ext/xxHash/xxh_x86dispatch.c
 ext/xxHash/xxh_x86dispatch.h
 ext/xxHash/xxhash.c
-xt/xxHash/xxhash.h
-lib/Crypt/xxHash.pm
+ext/xxHash/xxhash.h
+lib/Crypt/xxHash.pm
 LICENSE
 MANIFEST
 MANIFEST.SKIP

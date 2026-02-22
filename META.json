@@ -4,7 +4,7 @@
       "Chernenko Dmitiry cdn@cpan.org"
    ],
    "dynamic_config" : 1,
-   "generated_by" : "Module::Build version 0.4231",
+   "generated_by" : "Module::Build version 0.4234",
    "license" : [
       "bsd"
    ],
@@ -29,12 +29,6 @@
          }
       }
    },
-   "provides" : {
-      "Crypt::xxHash" : {
-         "file" : "lib/Crypt/xxHash.pm",
-         "version" : "0.08"
-      }
-   },
    "release_status" : "stable",
    "resources" : {
       "bugtracker" : {
@@ -48,5 +42,5 @@
       }
    },
    "version" : "0.08",
-   "x_serialization_backend" : "JSON::PP version 4.06"
+   "x_serialization_backend" : "JSON::PP version 4.16"
 }
