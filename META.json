@@ -16,16 +16,16 @@
    "prereqs" : {
       "build" : {
          "requires" : {
-            "ExtUtils::CBuilder" : "0.280225",
-            "File::Which" : "1.21",
-            "IPC::Run" : "20200505.0",
-            "Math::Int64" : "0.54",
-            "Test::More" : "1.302171"
+            "ExtUtils::CBuilder" : "0",
+            "File::Which" : "0",
+            "IPC::Run" : "0",
+            "Math::Int64" : "0",
+            "Test::More" : "0"
          }
       },
       "configure" : {
          "requires" : {
-            "Module::Build" : "0.19"
+            "Module::Build" : "0"
          }
       }
    },
