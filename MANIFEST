@@ -15,7 +15,6 @@ ext/xxHash/doc/xxhash_spec.md
 ext/xxHash/Doxyfile
 ext/xxHash/Doxyfile-internal
 ext/xxHash/fuzz/fuzzer.c
-ext/xxHash/fuzz/fuzzer.o
 ext/xxHash/libxxhash.pc.in
 ext/xxHash/LICENSE
 ext/xxHash/Makefile
@@ -24,11 +23,9 @@ ext/xxHash/SECURITY.md
 ext/xxHash/xxh3.h
 ext/xxHash/xxh_x86dispatch.c
 ext/xxHash/xxh_x86dispatch.h
-ext/xxHash/xxh_x86dispatch.o
 ext/xxHash/xxhash.c
-ext/xxHash/xxhash.h
-ext/xxHash/xxhash.o
-lib/Crypt/xxHash.pm
+xt/xxHash/xxhash.h
+lib/Crypt/xxHash.pm
 LICENSE
 MANIFEST
 MANIFEST.SKIP
